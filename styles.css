@@ -48,5 +48,67 @@ button {
   }
 /* FIN DEL PANEL SUPERIOR */
 
+/*CUADRO EDITOR DE IMAGEN*/
+.editor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+/* Contenedor del meme */
+.meme {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px; 
+  width: 100%;
+  max-width: 500px;
+  height: 400px;
+  margin-top: 30px;
+  background-image: url("imagenes/tigre.jpg"); /* Imagen de marcador */
+  background-size: contain; 
+  background-position: center;
+  background-color: black; /* Fondo de reserva */
+  background-repeat: no-repeat;
+  position: relative; 
+  box-sizing: border-box; 
+  border: 1px solid #ccc; /* Borde para referencia visual */
+}
 
+/* Estilos para el texto en el meme */
+.meme-texto {
+  position: absolute; 
+  text-align: center;
+  font-weight: bold;
+  color: black; 
+  background-color: rgba(255, 255, 255, 0.8); 
+  font-size: 25px;
+  height: 50px; 
+  width: 100%; 
+  left: 0; 
+  padding: 8px 0; 
+  margin: 0; 
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+#texto-superior {
+  top: 0; 
+}
+
+#texto-inferior {
+  bottom: 0; 
+}
+
+/* Estilo para el botón de descarga */
+.descargar {
+  margin-top: 40px;
+  color: white;
+}
+
+.descargar:hover {
+  transform: scale(1.2); 
+}
+/*FIN DEL CUADRO EDITOR DE IMAGEN*/
