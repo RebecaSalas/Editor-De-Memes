@@ -58,21 +58,145 @@
         <!-- FIN DEL PANEL SUPERIOR------>
 
         <!--CUADRO EDITOR DE IMAGEN------>
-        <section class="editor">
+        <main class="editor">
             <div class="meme">
-                <h2 class="meme-texto" id="texto-superior">TOP TEXT</h2>
-                <img
-                    src=""
-                    alt=""
+                <p class="meme-texto" id="texto-superior">TEXTO SUPERIOR</p>
+                <div
+                    class="contenedor"
                     id="meme-imagen"
-                    aria-label="cuadro de imagen"
-                />
-                <h2 class="meme-texto" id="texto-inferior">BOTTOM TEXT</h2>
+                    src=""
+                    alt="Imagen del Meme"
+                ></div>
+                <p class="meme-texto" id="texto-inferior">TEXTO INFERIOR</p>
             </div>
-            <button class="descargar" id="descargar-meme">
+            <button class="descargar">
                 <i class="fa-solid fa-download"></i>Descargar meme
             </button>
-        </section>
+        </main>
         <!--FIN DEL CUADRO EDITOR DE IMAGEN------>
+
+        <!--PANEL DERECHO------>
+        <aside>
+            <!--SECCION IMAGEN--->
+            <section id="seccion-imagen">
+                <h2>IMAGEN</h2>
+                <!--URL IMAGEN-->
+                <div class="img-contenedor">
+                    <label for="imagen-url">URL</label>
+                    <input
+                        type="url"
+                        id="imagen-url"
+                        placeholder="URL de la imagen"
+                    />
+                </div>
+                <!--FONDO-->
+                <h3>FONDO</h3>
+                <div class="fondo-contenedor">
+                    <div class="fondo">
+                        <input
+                            type="color"
+                            id="cambiar-fondo"
+                            value="#de2a01"
+                            name="cambiar color de fondo"
+                        />
+                        <span id="color-fondo" aria-hidden="true">#de2a01</span>
+                    </div>
+                    <select id="opcion-fondo">
+                        <option value="ninguno">Ninguno</option>
+                        <option value="aclarar">Aclarar</option>
+                        <option value="oscurecer">Oscurecer</option>
+                        <option value="diferencia">Diferencia</option>
+                        <option value="luminosidad">Luminosidad</option>
+                        <option value="multiplicar">Multiplicar</option>
+                    </select>
+                </div>
+                <!--FILTROS-->
+                <div class="filtros-contenedor"></div>
+                <h3>Filtros</h3>
+                <label for="brillo">Brillo</label>
+                <input
+                    type="range"
+                    id="brillo"
+                    min="0"
+                    max="1"
+                    step="0.1"
+                    value="1"
+                />
+                <label for="opacidad">Opacidad</label>
+                <input
+                    type="range"
+                    id="opacidad"
+                    min="0"
+                    max="1"
+                    step="0.1"
+                    value="1"
+                />
+                <label for="contraste">Contraste</label>
+                <input
+                    type="range"
+                    id="contraste"
+                    min="100"
+                    max="1000"
+                    step="1"
+                    value="100"
+                />
+                <label for="desenfoque">Desenfoque</label>
+                <input
+                    type="range"
+                    id="desenfoque"
+                    min="0"
+                    max="10"
+                    step="0.1"
+                    value="0"
+                />
+                <label for="escala-grises">Escala de grises</label>
+                <input
+                    type="range"
+                    id="escala-grises"
+                    min="0"
+                    max="100"
+                    step="1"
+                    value="0"
+                />
+                <label for="sepia">Sepia</label>
+                <input
+                    type="range"
+                    id="sepia"
+                    min="0"
+                    max="100"
+                    step="1"
+                    value="0"
+                />
+                <label for="Hue">Hue</label>
+                <input
+                    type="range"
+                    id="matiz"
+                    min="0"
+                    max="359"
+                    step="1"
+                    value="0"
+                />
+                <label for="saturacion">Saturación</label>
+                <input
+                    type="range"
+                    id="saturacion"
+                    min="100"
+                    max="1000"
+                    step="10"
+                    value="100"
+                />
+                <label for="negativo">Negativo</label>
+                <input
+                    type="range"
+                    id="negativo"
+                    min="0"
+                    max="1"
+                    step="0.1"
+                    value="0"
+                />
+                <button id="reestablecer-filtros">Reestablecer Filtros</button>
+            </section>
+            <!--FIN SECCIÓN DE IMAGEN---->
+        </aside>
     </body>
 </html>

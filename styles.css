@@ -112,3 +112,77 @@ button {
   transform: scale(1.2); 
 }
 /*FIN DEL CUADRO EDITOR DE IMAGEN*/
+
+aside {
+  width: 30%;
+  padding: 1em;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-left: auto; /* Mueve el panel al lado derecho */
+}
+
+#seccion-imagen h2 {
+  text-align: center;
+  color: #000;
+}
+
+#seccion-imagen h3 {
+  text-align: left;
+  color: #000;
+  margin-top: 1em;
+}
+
+.img-contenedor,
+.fondo-contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.img-contenedor label,
+.fondo-contenedor label {
+  display: block;
+  margin: 0.5em 0 0.2em;
+  color: #333;
+  text-align: left;
+}
+
+.img-contenedor input[type="url"],
+.fondo-contenedor input[type="color"],
+.fondo-contenedor select {
+  width: calc(100% - 2em);
+  padding: 0.5em;
+  margin-bottom: 1em;
+  box-sizing: border-box;
+}
+
+.fondo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.fondo input[type="color"],
+#opcion-fondo {
+  width: 48%;
+}
+
+#opcion-fondo {
+  margin-left: 2%;
+}
+
+/* Estilo para los filtros */
+#seccion-imagen label {
+  display: block;
+  margin: 0.5em 0 0.2em;
+  color: #333;
+  text-align: left;
+}
+
+#seccion-imagen input[type="range"] {
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  box-sizing: border-box;
+}
+
