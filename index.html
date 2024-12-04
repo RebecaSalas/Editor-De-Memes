@@ -69,6 +69,7 @@
                 ></div>
                 <p class="meme-texto" id="texto-inferior">TEXTO INFERIOR</p>
             </div>
+            <!--Descargar imagen-->
             <button class="descargar">
                 <i class="fa-solid fa-download"></i>Descargar meme
             </button>
@@ -80,7 +81,7 @@
             <!--SECCION IMAGEN--->
             <section class="panel-derecho">
                 <h2>IMAGEN</h2>
-                <!--URL IMAGEN-->
+                <!--Agregar imagen con url-->
                 <div class="imagen-contenedor">
                     <label for="imagen-url">URL</label>
                     <input
@@ -89,7 +90,7 @@
                         placeholder="URL de la imagen"
                     />
                 </div>
-                <!--FONDO-->
+                <!--Cambiar color de fondo-->
                 <h3>FONDO</h3>
                 <div class="fondo-contenedor">
                     <div class="fondo">
@@ -100,6 +101,7 @@
                             name="cambiar color de fondo"
                         />
                     </div>
+                    <!--Cambiar modo de mezcla de fondo-->
                     <select class="mezcla-fondo">
                         <option value="ninguno">Ninguno</option>
                         <option value="aclarar">Aclarar</option>
@@ -109,7 +111,7 @@
                         <option value="multiplicar">Multiplicar</option>
                     </select>
                 </div>
-                <!--FILTROS-->
+                <!--Cambiar filtros-->
                 <div class="filtros-contenedor">
                     <h3>FILTROS</h3>
                     <label for="brillo">Brillo</label>
@@ -193,15 +195,105 @@
                         step="0.1"
                         value="0"
                     />
+                    <!--Restablecer filtros---->
                     <button class="reestablecer-filtros">
                         Reestablecer Filtros
                     </button>
                 </div>
             </section>
-            <!--FIN SECCIÓN DE IMAGEN---->
+            <!--FIN SECCION DE IMAGEN---->
 
             <!--SECCIÓN DE TEXTO---->
-            <section class="panel-izquierdo"></section>
+            <section class="panel-izquierdo">
+                <h2>TEXTO</h2>
+                <!--Editar y remover texto superior---->
+                <div class="entrada-texto">
+                    <label for="texto-superior">SUPERIOR</label>
+                    <input
+                        type="text"
+                        id="texto-superior"
+                        placeholder="TEXTO SUPERIOR"
+                    />
+                    <input type="checkbox" id="Sin-texto-superior" />
+                    <label for="Sin-texto-superior">Sin texto superior</label>
+                </div>
+                <!--Editar y remover texto inferior---->
+                <div class="entrada-texto">
+                    <label for="texto-inferior">INFERIOR</label>
+                    <input
+                        type="text"
+                        id="texto-inferior"
+                        placeholder="TEXTO INFERIOR"
+                    />
+                    <input type="checkbox" id="Sin-texto-inferior" />
+                    <label for="Sin-texto-superior">Sin texto inferior</label>
+                </div>
+                <!--Cambiar familia de fuente---->
+                <div class="ajustes-fuente">
+                    <label for="fuente">FUENTE</label>
+                    <select id="fuente">
+                        <option value="Arial">Arial</option>
+                        <option value="Arial Black">Arial Black</option>
+                        <option value="American Typewriter">
+                            American Typewriter
+                        </option>
+                        <option value="Monospace">Monospace</option>
+                        <option value="Comic Sans MS">Comic Sans MS</option>
+                        <option value="Helvetica">Helvetica</option>
+                        <option value="Impact">Impact</option>
+                        <option value="Verdana">Verdana</option>
+                        <option value="Time New Roman">Time New Roman</option>
+                    </select>
+                    <!--Cambiar tamaño de fuente---->
+                    <input type="number" id="tamaño-fuente" value="40" />
+                    <!--Cambiar alineación---->
+                    <div class="alineacion">
+                        <button class="alineacion-izquierda"></button>
+                        <button class="alineacion-centro"></button>
+                        <button class="alineacion-derecha"></button>
+                    </div>
+                </div>
+                <!--Cambiar color de texto y fondo---->
+                <div class="ajustes-color">
+                    <label for="color">COLOR</label>
+                    <input type="color" id="color" value="" />
+                    <label for="fondo">FONDO</label>
+                    <input type="color" id="fondo" value="" />
+                    <input type="checkbox" id="fondo-transparente" />
+                    <label for="fondo-transparente">Fondo transparente</label>
+                </div>
+                <!--Contorno---->
+                <div class="ajustes-contorno">
+                    <label>CONTORNO</label>
+                    <button class="contorno-ninguno" aria-label="Ninguno">
+                        Ninguno
+                    </button>
+                    <button class="contorno-claro" aria-label="Claro">
+                        Claro
+                    </button>
+                    <button class="contorno-oscuro" aria-label="Oscuro">
+                        Oscuro
+                    </button>
+                </div>
+                <!--Espaciado---->
+                <div class="ajustes-espaciado">
+                    <label for="espaciado">ESPACIADO</label>
+                    <input type="number" id="espaciado" value="35" />
+                </div>
+                <!--Cambiar alto de línea de texto---->
+                <div class="ajustes-interlineado">
+                    <label for="interlineado">INTERLIANEADO</label>
+                    <select id="interlineado">
+                        <option value="0.8">0.8</option>
+                        <option value="1">1</option>
+                        <option value="1.2">1.2</option>
+                        <option value="1.5">1.5</option>
+                        <option value="2">2</option>
+                        <option value="2.5">2.5</option>
+                    </select>
+                </div>
+            </section>
+            <!--FIN SECCION DE TEXTO---->
         </aside>
     </body>
 </html>
