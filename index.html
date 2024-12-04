@@ -41,16 +41,16 @@
         <header>
             <h1 class="generador">Generador de Memes</h1>
             <div class="panel-superior">
-                <button class="button-imagen" id="btn-imagen">
+                <button class="boton-imagen">
                     <i class="fa-regular fa-file-image"></i>Imagen
                 </button>
-                <button class="button-texto" id="btn-texto">
+                <button class="boton-texto">
                     <i class="fa-sharp fa-solid fa-font"></i>Texto
                 </button>
-                <button class="button-oscuro" id="btn-oscuro">
+                <button class="boton-oscuro">
                     <i class="fa-solid fa-lightbulb"></i>Modo oscuro
                 </button>
-                <button class="button-claro" id="btn-claro">
+                <button class="boton-claro" id="btn-claro">
                     <i class="fa-solid fa-lightbulb"></i>Modo claro
                 </button>
             </div>
@@ -78,10 +78,10 @@
         <!--PANEL DERECHO------>
         <aside>
             <!--SECCION IMAGEN--->
-            <section id="seccion-imagen">
+            <section class="panel-derecho">
                 <h2>IMAGEN</h2>
                 <!--URL IMAGEN-->
-                <div class="img-contenedor">
+                <div class="imagen-contenedor">
                     <label for="imagen-url">URL</label>
                     <input
                         type="url"
@@ -96,12 +96,11 @@
                         <input
                             type="color"
                             id="cambiar-fondo"
-                            value="#de2a01"
+                            value=""
                             name="cambiar color de fondo"
                         />
-                        <span id="color-fondo" aria-hidden="true">#de2a01</span>
                     </div>
-                    <select id="opcion-fondo">
+                    <select class="mezcla-fondo">
                         <option value="ninguno">Ninguno</option>
                         <option value="aclarar">Aclarar</option>
                         <option value="oscurecer">Oscurecer</option>
@@ -111,92 +110,98 @@
                     </select>
                 </div>
                 <!--FILTROS-->
-                <div class="filtros-contenedor"></div>
-                <h3>Filtros</h3>
-                <label for="brillo">Brillo</label>
-                <input
-                    type="range"
-                    id="brillo"
-                    min="0"
-                    max="1"
-                    step="0.1"
-                    value="1"
-                />
-                <label for="opacidad">Opacidad</label>
-                <input
-                    type="range"
-                    id="opacidad"
-                    min="0"
-                    max="1"
-                    step="0.1"
-                    value="1"
-                />
-                <label for="contraste">Contraste</label>
-                <input
-                    type="range"
-                    id="contraste"
-                    min="100"
-                    max="1000"
-                    step="1"
-                    value="100"
-                />
-                <label for="desenfoque">Desenfoque</label>
-                <input
-                    type="range"
-                    id="desenfoque"
-                    min="0"
-                    max="10"
-                    step="0.1"
-                    value="0"
-                />
-                <label for="escala-grises">Escala de grises</label>
-                <input
-                    type="range"
-                    id="escala-grises"
-                    min="0"
-                    max="100"
-                    step="1"
-                    value="0"
-                />
-                <label for="sepia">Sepia</label>
-                <input
-                    type="range"
-                    id="sepia"
-                    min="0"
-                    max="100"
-                    step="1"
-                    value="0"
-                />
-                <label for="Hue">Hue</label>
-                <input
-                    type="range"
-                    id="matiz"
-                    min="0"
-                    max="359"
-                    step="1"
-                    value="0"
-                />
-                <label for="saturacion">Saturación</label>
-                <input
-                    type="range"
-                    id="saturacion"
-                    min="100"
-                    max="1000"
-                    step="10"
-                    value="100"
-                />
-                <label for="negativo">Negativo</label>
-                <input
-                    type="range"
-                    id="negativo"
-                    min="0"
-                    max="1"
-                    step="0.1"
-                    value="0"
-                />
-                <button id="reestablecer-filtros">Reestablecer Filtros</button>
+                <div class="filtros-contenedor">
+                    <h3>FILTROS</h3>
+                    <label for="brillo">Brillo</label>
+                    <input
+                        type="range"
+                        id="brillo"
+                        min="0"
+                        max="1"
+                        step="0.1"
+                        value="1"
+                    />
+                    <label for="opacidad">Opacidad</label>
+                    <input
+                        type="range"
+                        id="opacidad"
+                        min="0"
+                        max="1"
+                        step="0.1"
+                        value="1"
+                    />
+                    <label for="contraste">Contraste</label>
+                    <input
+                        type="range"
+                        id="contraste"
+                        min="100"
+                        max="1000"
+                        step="1"
+                        value="100"
+                    />
+                    <label for="desenfoque">Desenfoque</label>
+                    <input
+                        type="range"
+                        id="desenfoque"
+                        min="0"
+                        max="10"
+                        step="0.1"
+                        value="0"
+                    />
+                    <label for="escala-grises">Escala de grises</label>
+                    <input
+                        type="range"
+                        id="escala-grises"
+                        min="0"
+                        max="100"
+                        step="1"
+                        value="0"
+                    />
+                    <label for="sepia">Sepia</label>
+                    <input
+                        type="range"
+                        id="sepia"
+                        min="0"
+                        max="100"
+                        step="1"
+                        value="0"
+                    />
+                    <label for="Hue">Hue</label>
+                    <input
+                        type="range"
+                        id="matiz"
+                        min="0"
+                        max="359"
+                        step="1"
+                        value="0"
+                    />
+                    <label for="saturacion">Saturación</label>
+                    <input
+                        type="range"
+                        id="saturacion"
+                        min="100"
+                        max="1000"
+                        step="10"
+                        value="100"
+                    />
+                    <label for="negativo">Negativo</label>
+                    <input
+                        type="range"
+                        id="negativo"
+                        min="0"
+                        max="1"
+                        step="0.1"
+                        value="0"
+                    />
+                    <button class="reestablecer-filtros">
+                        Reestablecer Filtros
+                    </button>
+                </div>
             </section>
             <!--FIN SECCIÓN DE IMAGEN---->
+
+            <!--SECCIÓN DE TEXTO---->
+            <section class="panel-izquierdo"></section>
         </aside>
     </body>
 </html>

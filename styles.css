@@ -6,7 +6,7 @@ html, body {
 
 body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  /* background-image: linear-gradient(195deg, #fdfbfb 0, #ff2f00 12.5%, #ffbdb7 25%, #ffc6b9 37.5%, #ffffff 50%, #ffd2ca 62.5%, #ff9fa2 75%, #ecbdc1 87.5%, #ffffff 100%); */
+  background-image: linear-gradient(195deg, #fdfbfb 0, #ff2f00 12.5%, #ffbdb7 25%, #ffc6b9 37.5%, #ffffff 50%, #ffd2ca 62.5%, #ff9fa2 75%, #ecbdc1 87.5%, #ffffff 100%);
 }
 
 /*PANEL SUPERIOR*/
@@ -32,10 +32,6 @@ header{
   margin-top: -15px;
 }
 
-.panel-superior :hover {
-  transform: scale(1.2);
-  /* border: 1px solid; */
-}
 
 button {
   margin: 5px;
@@ -46,6 +42,11 @@ button {
   background-image: linear-gradient(195deg, #ffa0a0 0, #ff4040 12.5%, #ff4130 25%, #f23b12 37.5%, #ff1d1d 50%, #ec2e0c 62.5%, #f9070f 75%, #ff1515fa 87.5%, #ff0000 100%);
   font-size: 16px;
   }
+
+  .panel-superior :hover {
+    transform: scale(1.2);
+  }
+  
 /* FIN DEL PANEL SUPERIOR */
 
 /*CUADRO EDITOR DE IMAGEN*/
@@ -64,8 +65,8 @@ button {
   align-items: center;
   padding: 0 20px; 
   width: 100%;
-  max-width: 500px;
-  height: 400px;
+  max-width: 350px;
+  height: 350px;
   margin-top: 30px;
   background-image: url("imagenes/tigre.jpg"); /* Imagen de marcador */
   background-size: contain; 
@@ -104,7 +105,7 @@ button {
 
 /* Estilo para el botón de descarga */
 .descargar {
-  margin-top: 40px;
+  margin-top: 10px;
   color: white;
 }
 
@@ -113,76 +114,102 @@ button {
 }
 /*FIN DEL CUADRO EDITOR DE IMAGEN*/
 
-aside {
-  width: 30%;
-  padding: 1em;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  margin-left: auto; /* Mueve el panel al lado derecho */
+/*PANEL DERECHO*/
+.panel-derecho {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-image: linear-gradient(195deg, #ff0000 0, #de2a01 12.5%, #db1604 25%, #f23b12 37.5%, #ff1d1d 50%, #ec2e0c 62.5%, #f9070f 75%, #ff1515fa 87.5%, #ff0000 100%);
+  height: 100vh;
+  width: 300px;
+  font-size: 10px;
+  padding: 10px 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#seccion-imagen h2 {
+.panel-derecho h2 {
   text-align: center;
   color: #000;
+  font-size: 16px;
 }
 
-#seccion-imagen h3 {
-  text-align: left;
-  color: #000;
-  margin-top: 1em;
-}
-
-.img-contenedor,
-.fondo-contenedor {
+/*URL IMAGEN*/
+.imagen-contenedor {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  font-size: 14px;
 }
 
-.img-contenedor label,
-.fondo-contenedor label {
-  display: block;
-  margin: 0.5em 0 0.2em;
-  color: #333;
-  text-align: left;
-}
-
-.img-contenedor input[type="url"],
-.fondo-contenedor input[type="color"],
-.fondo-contenedor select {
-  width: calc(100% - 2em);
-  padding: 0.5em;
-  margin-bottom: 1em;
-  box-sizing: border-box;
-}
-
-.fondo {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1em;
-}
-
-.fondo input[type="color"],
-#opcion-fondo {
-  width: 48%;
-}
-
-#opcion-fondo {
-  margin-left: 2%;
-}
-
-/* Estilo para los filtros */
-#seccion-imagen label {
-  display: block;
-  margin: 0.5em 0 0.2em;
-  color: #333;
-  text-align: left;
-}
-
-#seccion-imagen input[type="range"] {
+#imagen-url {
+  border-radius: 5px;
+  border: none;
   width: 100%;
-  padding: 0.5em;
-  margin-bottom: 1em;
-  box-sizing: border-box;
+  height: 30px;
 }
 
+.imagen-contenedor label{
+  margin: 10px 0;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/*FONDO*/
+.panel-derecho h3 {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.fondo-contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mezcla-fondo {
+  width: 43%;
+  height: 30px;
+  background-color: white;
+  border-radius: 5px;
+  border: none;
+  padding: 6px 12px;
+  margin-bottom: 6px;
+}
+
+/*Filtros*/
+.panel-derecho .filtro{
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+.filtros-contenedor label{
+  font-size: 12px;
+}
+
+
+input[type="range"] {
+  appearance: none;
+  width: 100%;
+  background-color: black;
+  border-radius: 10px;
+  height: 6px;
+  margin-top: 10px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+}
+
+.reestablecer-filtros {
+  margin-top: 20px;
+}
+
+.descargar:hover {
+  transform: scale(1.2); 
+}
+/*FIN DEL PANEL DERECHO*/
