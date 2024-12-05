@@ -127,7 +127,7 @@ button {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.panel-derecho h2 {
+h2 {
   text-align: center;
   color: #000;
   font-size: 16px;
@@ -228,11 +228,95 @@ input[type='range']::-webkit-slider-thumb {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 } 
 
-.panel-izquierdo h2 {
-  text-align: center;
-  color: #000;
-  font-size: 16px;
+.panel-izquierdo label {
+  font-size: 14px;
 }
 
+/*Texto superior e inferior*/
+.entrada-texto input[type="text"] { 
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  height: 20px;
+  text-align: center;
+  padding: 5px 0;
+  margin-top: 10px;
+}
 
+.entrada-texto input[type="checkbox"] { 
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
+/*Familia de fuente*/
+.ajustes-fuente{
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  height: 30px;
+}
+
+/*Tamaño de fuente*/
+#fuente{
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  padding: 5px 0;
+  margin-top: 10px;
+}
+
+/*Alineación*/
+.fuente-alineacion {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3px;
+  height: 30px;
+}
+
+.fuente-alineacion input{
+  width: 20%;
+  margin-top: 3px;
+}
+
+/* color de texto y fondo */
+.ajustes-color{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+}
+
+.ajustes-contorno {
+  margin-top: 10px;
+}
+
+/*Contorno*/
+.contorno-texto{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+/*Espaciado*/
+.ajustes-espaciado input {
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  height: 20px;
+  text-align: center;
+  padding: 5px 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/*Alto de línea de texto*/
+#interlineado{
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  padding: 5px 0;
+  margin-top: 10px;
+}

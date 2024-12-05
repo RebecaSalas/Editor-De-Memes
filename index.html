@@ -226,11 +226,13 @@
                         placeholder="TEXTO INFERIOR"
                     />
                     <input type="checkbox" id="Sin-texto-inferior" />
-                    <label for="Sin-texto-superior">Sin texto inferior</label>
+                    <label for="Sin-texto-inferior">Sin texto inferior</label>
                 </div>
-                <!--Cambiar familia de fuente---->
+
+                <!--FUENTE-->
                 <div class="ajustes-fuente">
                     <label for="fuente">FUENTE</label>
+                    <!--Cambiar familia de fuente---->
                     <select id="fuente">
                         <option value="Arial">Arial</option>
                         <option value="Arial Black">Arial Black</option>
@@ -245,35 +247,55 @@
                         <option value="Time New Roman">Time New Roman</option>
                     </select>
                     <!--Cambiar tamaño de fuente---->
-                    <input type="number" id="tamaño-fuente" value="40" />
-                    <!--Cambiar alineación---->
-                    <div class="alineacion">
-                        <button class="alineacion-izquierda"></button>
-                        <button class="alineacion-centro"></button>
-                        <button class="alineacion-derecha"></button>
+                    <div class="fuente-alineacion">
+                        <input type="number" id="tamaño-fuente" value="40" />
+                        <!--Cambiar alineación---->
+                        <div class="alineacion">
+                            <button class="alineacion-izquierda">
+                                <i class="fas fa-align-left"></i>
+                            </button>
+                            <button class="alineacion-centro">
+                                <i class="fas fa-align-center"></i>
+                            </button>
+                            <button class="alineacion-derecha">
+                                <i class="fas fa-align-right"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <!--Cambiar color de texto y fondo---->
-                <div class="ajustes-color">
-                    <label for="color">COLOR</label>
-                    <input type="color" id="color" value="" />
-                    <label for="fondo">FONDO</label>
-                    <input type="color" id="fondo" value="" />
-                    <input type="checkbox" id="fondo-transparente" />
-                    <label for="fondo-transparente">Fondo transparente</label>
+                <div class="contenedor-color-fondo">
+                    <div class="ajustes-color">
+                        <div class="color-texto">
+                            <label for="color">COLOR</label>
+                            <input type="color" id="color" value="" />
+                        </div>
+                        <div class="color-fondo">
+                            <label for="fondo">FONDO</label>
+                            <input type="color" id="fondo" value="" />
+                        </div>
+                    </div>
+                    <div class="transparente">
+                        <input type="checkbox" id="fondo-transparente" />
+                        <label for="fondo-transparente"
+                            >Fondo transparente</label
+                        >
+                    </div>
                 </div>
                 <!--Contorno---->
                 <div class="ajustes-contorno">
                     <label>CONTORNO</label>
-                    <button class="contorno-ninguno" aria-label="Ninguno">
-                        Ninguno
-                    </button>
-                    <button class="contorno-claro" aria-label="Claro">
-                        Claro
-                    </button>
-                    <button class="contorno-oscuro" aria-label="Oscuro">
-                        Oscuro
-                    </button>
+                    <div class="contorno-texto">
+                        <button class="contorno-ninguno" aria-label="Ninguno">
+                            Ninguno
+                        </button>
+                        <button class="contorno-claro" aria-label="Claro">
+                            Claro
+                        </button>
+                        <button class="contorno-oscuro" aria-label="Oscuro">
+                            Oscuro
+                        </button>
+                    </div>
                 </div>
                 <!--Espaciado---->
                 <div class="ajustes-espaciado">
@@ -282,7 +304,7 @@
                 </div>
                 <!--Cambiar alto de línea de texto---->
                 <div class="ajustes-interlineado">
-                    <label for="interlineado">INTERLIANEADO</label>
+                    <label for="interlineado">INTERLINEADO</label>
                     <select id="interlineado">
                         <option value="0.8">0.8</option>
                         <option value="1">1</option>
