@@ -50,7 +50,7 @@
                 <button class="boton-oscuro">
                     <i class="fa-solid fa-lightbulb"></i>Modo oscuro
                 </button>
-                <button class="boton-claro" id="btn-claro">
+                <button class="boton-claro">
                     <i class="fa-solid fa-lightbulb"></i>Modo claro
                 </button>
             </div>
@@ -80,6 +80,9 @@
         <aside>
             <!--SECCION IMAGEN--->
             <section class="panel-derecho">
+                <button class="cerrar-panel">
+                    <i class="fas fa-times"></i>
+                </button>
                 <h2>IMAGEN</h2>
                 <!--Agregar imagen con url-->
                 <div class="imagen-contenedor">
@@ -97,7 +100,7 @@
                         <input
                             type="color"
                             id="cambiar-fondo"
-                            value=""
+                            value="#ffffff"
                             name="cambiar color de fondo"
                         />
                     </div>
@@ -205,6 +208,10 @@
 
             <!--SECCIÓN DE TEXTO---->
             <section class="panel-izquierdo">
+                <!--Cerrar panel texto---->
+                <button class="cerrar-panel">
+                    <i class="fas fa-times"></i>
+                </button>
                 <h2>TEXTO</h2>
                 <!--Editar y remover texto superior---->
                 <div class="entrada-texto">
@@ -268,11 +275,11 @@
                     <div class="ajustes-color">
                         <div class="color-texto">
                             <label for="color">COLOR</label>
-                            <input type="color" id="color" value="" />
+                            <input type="color" id="color" value="#000000" />
                         </div>
                         <div class="color-fondo">
                             <label for="fondo">FONDO</label>
-                            <input type="color" id="fondo" value="" />
+                            <input type="color" id="fondo" value="#ffffff" />
                         </div>
                     </div>
                     <div class="transparente">
@@ -318,4 +325,5 @@
             <!--FIN SECCION DE TEXTO---->
         </aside>
     </body>
+    <script src="./main.js"></script>
 </html>

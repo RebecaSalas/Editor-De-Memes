@@ -6,7 +6,22 @@ html, body {
 
 body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  background-image: linear-gradient(195deg, #fdfbfb 0, #ff2f00 12.5%, #ffbdb7 25%, #ffc6b9 37.5%, #ffffff 50%, #ffd2ca 62.5%, #ff9fa2 75%, #ecbdc1 87.5%, #ffffff 100%);
+}
+
+/* Modo claro */
+body.claro .panel-derecho,
+body.claro .panel-izquierdo,
+body.claro {
+  background-image: linear-gradient(195deg, #ff4242 0, #de2a01 12.5%, #db1604 25%, #ffc6b9 37.5%, #f1c5c5 50%, #ffd2ca 62.5%, #ff9fa2 75%, #ecbdc1 87.5%, #ffffff 100%);
+  color: #000000;
+}
+
+/* Modo oscuro */
+body.oscuro .panel-derecho,
+body.oscuro .panel-izquierdo,
+body.oscuro {
+  background-image: linear-gradient(195deg, #ff0000 0, #de2a01 12.5%, #db1604 25%, #f23b12 37.5%, #ff1d1d 50%, #ec2e0c 62.5%, #f9070f 75%, #ff1515fa 87.5%, #ff0000 100%);
+  color: #ffffff;
 }
 
 /*PANEL SUPERIOR*/
@@ -31,7 +46,6 @@ header{
   justify-content: center;
   margin-top: -15px;
 }
-
 
 button {
   margin: 5px;
@@ -115,11 +129,10 @@ button {
 /*FIN DEL CUADRO EDITOR DE IMAGEN*/
 
 /*PANEL DERECHO*/
-.panel-derecho {
+.panel-derecho, .panel-izquierdo {
   position: fixed;
   top: 0;
   right: 0;
-  background-image: linear-gradient(195deg, #ff0000 0, #de2a01 12.5%, #db1604 25%, #f23b12 37.5%, #ff1d1d 50%, #ec2e0c 62.5%, #f9070f 75%, #ff1515fa 87.5%, #ff0000 100%);
   height: 100vh;
   width: 300px;
   font-size: 10px;
@@ -132,6 +145,19 @@ h2 {
   color: #000;
   font-size: 16px;
 }
+
+/* cerrar paneles (imagen/texto) */ 
+.cerrar-panel { 
+  font-size: 16px; 
+  cursor: pointer; 
+  position: absolute; 
+  top: 10px; 
+  right: 10px;
+} 
+
+/* Ocultar paneles (imagen/texto) */ 
+.oculto { display: none; }
+
 
 /*URL IMAGEN*/
 .imagen-contenedor {
@@ -213,20 +239,6 @@ input[type='range']::-webkit-slider-thumb {
   transform: scale(1.2); 
 }
 /*FIN DEL PANEL DERECHO*/
-
-
-/*PANEL IZQUIERDO*/
-.panel-izquierdo {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-image: linear-gradient(195deg, #ff0000 0, #de2a01 12.5%, #db1604 25%, #f23b12 37.5%, #ff1d1d 50%, #ec2e0c 62.5%, #f9070f 75%, #ff1515fa 87.5%, #ff0000 100%);
-  height: 100vh;
-  width: 300px;
-  font-size: 10px;
-  padding: 10px 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-} 
 
 .panel-izquierdo label {
   font-size: 14px;
