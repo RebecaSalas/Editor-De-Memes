@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./styles.css" />
+        <link rel="stylesheet" href="styles.css" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
@@ -18,7 +18,7 @@
             href="./imagenes/RS_Dseñadora web.png"
         />
         <link
-            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&amp;display=swap"
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
             rel="stylesheet"
         />
         <script
@@ -41,16 +41,16 @@
         <header>
             <h1 class="generador">Generador de Memes</h1>
             <div class="panel-superior">
-                <button class="boton-imagen">
+                <button type="button" class="boton-imagen">
                     <i class="fa-regular fa-file-image"></i>Imagen
                 </button>
-                <button class="boton-texto">
+                <button type="button" class="boton-texto">
                     <i class="fa-sharp fa-solid fa-font"></i>Texto
                 </button>
-                <button class="boton-oscuro">
+                <button type="button" class="boton-oscuro">
                     <i class="fa-solid fa-lightbulb"></i>Modo oscuro
                 </button>
-                <button class="boton-claro">
+                <button type="button" class="boton-claro">
                     <i class="fa-solid fa-lightbulb"></i>Modo claro
                 </button>
             </div>
@@ -65,7 +65,7 @@
                 <p class="meme-texto" id="texto-inferior">TEXTO INFERIOR</p>
             </div>
             <!--Descargar imagen-->
-            <button class="descargar">
+            <button type="button" class="descargar">
                 <i class="fa-solid fa-download"></i>Descargar meme
             </button>
         </main>
@@ -74,7 +74,11 @@
         <aside>
             <!--PANEL DERECHO - SECCION IMAGEN--->
             <section class="panel-derecho">
-                <button class="cerrar-panel">
+                <button
+                    type="button"
+                    class="cerrar-panel"
+                    aria-label="Cerrar panel"
+                >
                     <i class="fas fa-times"></i>
                 </button>
                 <h2>IMAGEN</h2>
@@ -203,7 +207,11 @@
             <!--PANEL IZQUIERDO - SECCIÓN DE TEXTO---->
             <section class="panel-izquierdo">
                 <!--Cerrar panel texto---->
-                <button class="cerrar-panel">
+                <button
+                    type="button"
+                    class="cerrar-panel"
+                    aria-label="Cerrar panel"
+                >
                     <i class="fas fa-times"></i>
                 </button>
                 <h2>TEXTO</h2>
@@ -252,13 +260,25 @@
                         <input type="number" id="tamaño-fuente" value="40" />
                         <!--Cambiar alineación---->
                         <div class="alineacion">
-                            <button class="alineacion-izquierda">
+                            <button
+                                type="button"
+                                class="alineacion-izquierda"
+                                aria-label="Alinear a la izquierda"
+                            >
                                 <i class="fas fa-align-left"></i>
                             </button>
-                            <button class="alineacion-centro">
+                            <button
+                                type="button"
+                                class="alineacion-centro"
+                                aria-label="Alinear al centro"
+                            >
                                 <i class="fas fa-align-center"></i>
                             </button>
-                            <button class="alineacion-derecha">
+                            <button
+                                type="button"
+                                class="alineacion-derecha"
+                                aria-label="Alinear a la derecha"
+                            >
                                 <i class="fas fa-align-right"></i>
                             </button>
                         </div>
@@ -287,13 +307,25 @@
                 <div class="ajustes-contorno">
                     <label>CONTORNO</label>
                     <div class="contorno-texto">
-                        <button class="contorno-ninguno" aria-label="Ninguno">
+                        <button
+                            type="button"
+                            class="contorno-ninguno"
+                            aria-label="Ninguno"
+                        >
                             Ninguno
                         </button>
-                        <button class="contorno-claro" aria-label="Claro">
+                        <button
+                            type="button"
+                            class="contorno-claro"
+                            aria-label="Claro"
+                        >
                             Claro
                         </button>
-                        <button class="contorno-oscuro" aria-label="Oscuro">
+                        <button
+                            type="button"
+                            class="contorno-oscuro"
+                            aria-label="Oscuro"
+                        >
                             Oscuro
                         </button>
                     </div>
@@ -318,6 +350,6 @@
             </section>
             <!--FIN PANEL IZQUIERDO - SECCION DE TEXTO---->
         </aside>
+        <script src="main.js"></script>
     </body>
-    <script src="./main.js"></script>
 </html>

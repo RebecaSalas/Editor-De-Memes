@@ -12,7 +12,7 @@ window.onload = () => {
     const $botonClaro = $(".boton-claro"); // Botón para activar modo claro (3)
     const $botonOscuro = $(".boton-oscuro"); // Botón para activar modo oscuro (3)
     const $body = document.body; // Elemento <body> (3)
-    /// Abrir y cerrar panel
+    /// Cerrar panel
     const $botonCerrarDerecho = $(".panel-derecho .cerrar-panel"); // Botón para cerrar panel derecho (2)
     const $botonCerrarIzquierdo = $(".panel-izquierdo .cerrar-panel"); // Botón para cerrar panel izquierdo (2)
     //// PANEL DERECHO - SECCION IMAGEN...
@@ -60,7 +60,7 @@ window.onload = () => {
 
     //............................................Inicio de Funciones ...........................................................
     //// PANEL SUPERIOR...
-    //Función para alternar paneles (1)
+    //Función para alternar paneles (1) (2)
     const alternarPaneles = (panelMostrar, panelOcultar) => {
         panelMostrar.style.display = "block"; // Mostrar el panel (1)
         panelOcultar.style.display = "none"; // Ocultar el panel (1)
@@ -70,7 +70,7 @@ window.onload = () => {
         } else {
             panelMostrar.classList.remove("panel-responsive");
         }
-    };
+    }; // Fin alternarPaneles
 
     // Función para alternar modo claro/oscuro (3)
     const alternarModo = () => {
@@ -94,13 +94,6 @@ window.onload = () => {
         }
     }; // Fin actualizarBotones
     ////... FIN PANEL SUPERIOR
-
-    /// Abrir y cerrar panel...
-    //Función para ocultar panel Imagen/Texto (2)
-    const ocultarPanel = (panel) => {
-        panel.style.display = "none"; // Ocultar el panel
-    }; //Fin ocultarPanel
-    ///...Fin abrir y cerrar panel
 
     //// PANEL DERECHO - SECCION IMAGEN...
     // Función para actualizar imagen de fondo (4)
@@ -178,54 +171,40 @@ window.onload = () => {
     //..................................................Fin de Funciones..........................................................--->
 
     //.................................................. Inicio de Eventos ..........................................................
-    //// PANEL SUPERIOR...
-    $botonImagen.addEventListener("click", () =>
-        alternarPaneles($panelDerecho, $panelIzquierdo)
-    ); // Click botón imagen (1)
-    $botonTexto.addEventListener("click", () =>
-        alternarPaneles($panelIzquierdo, $panelDerecho)
-    ); // Click botón texto (1)
-    $botonClaro.addEventListener("click", alternarModo); // Click modo claro (3)
-    $botonOscuro.addEventListener("click", alternarModo); // Click modo oscuro (3)
-    ////... FIN PANEL SUPERIOR
-
-    /// Abrir y cerrar panel...
-    // Mostrar el panel de imagen y ocultar el panel de texto (2)
+    //// PANEL SUPERIOR.../// /// Cerrar Panel...
     $botonImagen.addEventListener("click", () => {
-        ocultarPanel($panelIzquierdo); // Ocultar el panel izquierdo si está visible
-        mostrarPanel($panelDerecho); // Mostrar el panel derecho
+        alternarPaneles($panelDerecho, $panelIzquierdo); // Mostrar el panel derecho y ocultar el izquierdo (1)
     });
 
-    // Mostrar el panel de texto y ocultar el panel de imagen (2)
     $botonTexto.addEventListener("click", () => {
-        ocultarPanel($panelDerecho); // Ocultar el panel derecho si está visible
-        mostrarPanel($panelIzquierdo); // Mostrar el panel izquierdo
+        alternarPaneles($panelIzquierdo, $panelDerecho); // Mostrar el panel izquierdo y ocultar el derecho (1)
     });
 
-    // Cerrar el panel derecho (imagen) (2)
-    $botonCerrarDerecho?.addEventListener("click", () =>
-        ocultarPanel($panelDerecho)
-    );
+    $botonCerrarDerecho?.addEventListener("click", () => {
+        $panelDerecho.style.display = "none"; // Cerrar el panel derecho (2)
+    });
 
-    // Cerrar el panel izquierdo (texto) (2)
-    $botonCerrarIzquierdo?.addEventListener("click", () =>
-        ocultarPanel($panelIzquierdo)
-    );
-    ///...Fin abrir y cerrar panel
+    $botonCerrarIzquierdo?.addEventListener("click", () => {
+        $panelIzquierdo.style.display = "none"; // Cerrar el panel izquierdo (2)
+    });
+
+    $botonClaro.addEventListener("click", alternarModo); // Alternar a modo claro (3)
+    $botonOscuro.addEventListener("click", alternarModo); // Alternar a modo oscuro (3)
+    //// FIN PANEL SUPERIOR.../// /// Fin cerrar Panel...
 
     /// PANEL DERECHO - SECCION IMAGEN...
     $urlImagen.addEventListener("input", actualizarImagen); // Actualizar la imagen al cambiar la URL (4)
     $colorFondo.addEventListener("input", cambiarColorFondo); // Actualizar el color de fondo al cambiar la selección (5)
     $modoMezcla.addEventListener("change", cambiarModoMezcla); // Actualizar el modo de mezcla al cambiar la selección (6)
-    $filtroBrillo.addEventListener("input", aplicarFiltros); // Actualizar filtro (7)
-    $filtroOpacidad.addEventListener("input", aplicarFiltros);
-    $filtroContraste.addEventListener("input", aplicarFiltros);
-    $filtroDesenfoque.addEventListener("input", aplicarFiltros);
-    $filtroEscalaGrises.addEventListener("input", aplicarFiltros);
-    $filtroSepia.addEventListener("input", aplicarFiltros);
-    $filtroMatiz.addEventListener("input", aplicarFiltros);
-    $filtroSaturacion.addEventListener("input", aplicarFiltros);
-    $filtroNegativo.addEventListener("input", aplicarFiltros);
+    $filtroBrillo.addEventListener("input", aplicarFiltros); // Actualizar filtro brillo (7)
+    $filtroOpacidad.addEventListener("input", aplicarFiltros); // Actualizar filtro opacidad (7)
+    $filtroContraste.addEventListener("input", aplicarFiltros); // Actualizar filtro contraste (7)
+    $filtroDesenfoque.addEventListener("input", aplicarFiltros); // Actualizar filtro desenfoque (7)
+    $filtroEscalaGrises.addEventListener("input", aplicarFiltros); // Actualizar filtro escala de grises (7)
+    $filtroSepia.addEventListener("input", aplicarFiltros); // Actualizar filtro sepia (7)
+    $filtroMatiz.addEventListener("input", aplicarFiltros); // Actualizar filtro matiz (7)
+    $filtroSaturacion.addEventListener("input", aplicarFiltros); // Actualizar filtro saturación (7)
+    $filtroNegativo.addEventListener("input", aplicarFiltros); // Actualizar filtro negativo (7)
     const $botonRestablecerFiltros = $(".reestablecer-filtros"); // Botón para restablecer filtros (8)
     $botonRestablecerFiltros.addEventListener("click", restablecerFiltros);
     ////... FIN PANEL DERECHO - SECCION IMAGEN
