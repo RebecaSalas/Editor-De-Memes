@@ -1,5 +1,5 @@
 # Generador de Memes
-(![editorDeMemes](https://github.com/user-attachments/assets/1d85db22-1833-4f18-94b6-f0879d276e96))
+![editorDeMemes](https://github.com/user-attachments/assets/1d85db22-1833-4f18-94b6-f0879d276e96)
 ## Descripción
 Bienvenido al Generador de Memes, una herramienta sencilla y divertida para crear memes personalizados. 
 *¡Dale rienda suelta a tu creatividad y disfruta creando memes únicos!*
